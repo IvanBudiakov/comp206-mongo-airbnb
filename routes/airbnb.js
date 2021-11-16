@@ -15,10 +15,15 @@ router.get('/', (req, res) => {
 
 
 router.get('/send', (req,res)=>{
-  let criteria = {bedrooms:{$gte:3}, 
-  number_of_reviews:{$gte:5},
-  "address.country_code":"US",
-  //amenities : {$in : ['WiFi', 'Coffee Maker']}
+  let criteria = {
+    bedrooms:{bedrooms},
+    minimum_nights:{nights},
+    "address.country_code" : {countryCode}
+
+  //   bedrooms:{$gte:3}, 
+  // number_of_reviews:{$gte:5},
+  // "address.country_code":"US",
+  // //amenities : {$in : ['WiFi', 'Coffee Maker']}
 };
 
   mongoQueries.findListing(res, criteria);
