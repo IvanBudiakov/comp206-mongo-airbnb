@@ -8,18 +8,31 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Airbnb Listings</h1>
+    <h1>Airbnb Summaries</h1>
 
 
     <table>
-    <%   listings.forEach(listing=>{ %>
+        <tr class = "headRow">
+        <th>ID</th>
+        <th>Name</th>
+        <th>#Bedrooms</th>
+        <th>Summary</th>
+        <th></th>
+        </tr>                   
+        <!-- looping through listings and displaying properties-->
+    <%   summaries.forEach(summary=>{ %>
         <tr>
-             <%= listing._id %>
-             <th><%= listing.name %></th> 
-             <td><%= listing.price %></td>         
-             <td><%= listing.description %></td>
+            <form action="listing">
+             <td> <button class = "sumID" id="sumID" value = "<%= summary._id %>"> <%= summary._id %> </button></td>
+             <td class = "headt"><%= summary.name %></td>
+             <td><%=  summary.bedrooms %> Bedrooms</td>         
+             <td class = "sum"><%=  summary.summary %></td>    
+             <td><img src = "<%= summary.images.picture_url %>" alt = "image not found"></td>
+               
+            </form>
         </tr>
     <% }) %> 
     </table>
+    
 </body>
 </html>

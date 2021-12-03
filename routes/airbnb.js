@@ -35,4 +35,11 @@ router.get("/list", (req,res)=>{
   mongoQueries.findListings(res, criteria, limitList)
 })
 
+router.get("/listing" , (req,res) => {
+  let criteria = {
+    _id : req.query.sumID
+  }
+  mongoQueries.findListing(res, criteria)
+})
+
 module.exports = router;

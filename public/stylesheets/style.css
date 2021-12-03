@@ -22,12 +22,42 @@ a {
     width: 7%;
 }
 
-table, th, td {
+/* td {
   border: 1px solid black;
+  border-collapse: collapse;
 
+} */
+th{
+  color:black
 }
-th,td
+
+td
 {
-  
-  padding: 10px;
+  color:#4b1602;
+  padding: 15px;
+}
+td{
+  border-top:solid 1px black ;
+  border-collapse: collapse;
+  font-size:17px;
+  width:10%
+}
+.headt
+{
+  font-size:18px;
+  width : 15%
+}
+
+img{
+  width : 280px;
+}
+.sumID
+{
+  background: none;
+  border: none;
+  font-size : 18px
+}
+.headRow
+{
+  font-size : 24px
 }
