@@ -10,20 +10,45 @@
 
 <h1>One listing</h1>
     <form action="airbnb/send">
+      <div class = "pair">
     <label for="bedrooms">Minimum Number of Bedrooms</label>
-    <input type="text" id = "bedrooms" name = "bedrooms"></br>
+    <input type="number" id = "bedrooms" value = 4 name = "bedrooms">
+      </div><br>
+      <div class = "pair">
     <label for="nights">Minimum Number of Nights</label>
-    <input type="text" id = "nights" name = "nights">
+    <input type="number" id = "nights" value = 3 name = "nights">
+      </div><br>
+      <div class = "pair">
     <label for="countryCode">Country Code</label>
-    <input type="text" id = "countryCode" name = "countryCode">
+    <input type="text" id = "countryCode" value = "CA" name = "countryCode">
+      </div><br>
+     
     <input type="submit" value = "Send Query">
   </form>
 
 
   <h1>Many listings</h1>
   <form action="airbnb/list">
+    <div class = "pair">
     <label for="bedrooms">Minimum Number of Bedrooms</label>
-    <input type="text" id = "bedrooms" name = "bedrooms">
+    <input type="number" id = "bedrooms" value = 5 name = "bedrooms">
+    </div><br>
+    <div class = "pair">
+      <label for="countryList">Country</label>
+      <select name="countryList" id="countryList">
+        <option value="Canada">Canada</option>
+        <option value="Brazil">Brazil</option>
+        <option value="China">China</option>
+      </select>
+    </div><br>
+
+    <div class = "pair">
+      <label for="numListings">Number of Results</label>
+      <input class = "slider" type="range" value = 7 name="numListings" 
+      id="numListings" min = 5 max = 10 step = 1 oninput="this.nextElementSibling.value = this.value">
+      <output>7</output>
+    </div><br>
+
     <input type="submit" value = "Send Query">
   </form>
 

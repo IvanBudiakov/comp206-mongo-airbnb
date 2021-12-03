@@ -1,8 +1,33 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: beige;
 }
 
 a {
   color: #00B7FF;
+}
+
+.pair{
+  margin-bottom:5px;
+}
+
+*
+{
+  color:#4a2c2a;
+}
+
+.slider
+{
+    width: 7%;
+}
+
+table, th, td {
+  border: 1px solid black;
+
+}
+th,td
+{
+  
+  padding: 10px;
 }

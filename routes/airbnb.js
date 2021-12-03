@@ -15,25 +15,24 @@ router.get('/', (req, res) => {
 
 
 router.get('/send', (req,res)=>{
+  
   let criteria = {
-    bedrooms:{bedrooms},
-    minimum_nights:{nights},
-    "address.country_code" : {countryCode}
-
-  //   bedrooms:{$gte:3}, 
-  // number_of_reviews:{$gte:5},
-  // "address.country_code":"US",
-  // //amenities : {$in : ['WiFi', 'Coffee Maker']}
+    bedrooms:{$gte: parseInt(req.query.bedrooms)},
+    minimum_nights: req.query.nights,
+    "address.country_code" : req.query.countryCode
 };
-
   mongoQueries.findListing(res, criteria);
 })
 
 
 
 router.get("/list", (req,res)=>{
-  let criteria = {}
-  mongoQueries.findListing(res, criteria)
+  let criteria = {
+    bedrooms:{$gte: parseInt(req.query.bedrooms)},
+    "address.country" : req.query.countryList
+  }
+  let limitList = parseInt(req.query.numListings)
+  mongoQueries.findListings(res, criteria, limitList)
 })
 
 module.exports = router;
