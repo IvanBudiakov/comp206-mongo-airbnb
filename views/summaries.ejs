@@ -23,8 +23,8 @@
     <%   summaries.forEach(summary=>{ %>
         <tr>
             <form action="listing">
-             <td> <input type = "button" class = "sumID" id="sumID" name = "sumID" value = "<% summary._id %>" 
-                onclick = "move(this.value)"><%= summary._id %></td>
+             <td> <button class = "sumID" id="sumID" name = "sumID" value = "<%= summary._id %>" 
+                onclick = "move(this.value)"><%= summary._id %></button></td>
              <script>
                 //  move to the exact listing when pressing the id
                  function move(val)
