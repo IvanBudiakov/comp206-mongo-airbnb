@@ -38,7 +38,9 @@ router.get("/list", (req,res)=>{
 router.get("/listing" , (req,res) => {
   let criteria = {
     _id : req.query.sumID
+    
   }
+  console.log(req.query.sumID)
   mongoQueries.findListing(res, criteria)
 })
 

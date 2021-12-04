@@ -23,7 +23,16 @@
     <%   summaries.forEach(summary=>{ %>
         <tr>
             <form action="listing">
-             <td> <button class = "sumID" id="sumID" value = "<%= summary._id %>"> <%= summary._id %> </button></td>
+             <td> <input type = "button" class = "sumID" id="sumID" name = "sumID" value = "<% summary._id %>" 
+                onclick = "move(this.value)"><%= summary._id %></td>
+             <script>
+                //  move to the exact listing when pressing the id
+                 function move(val)
+                 {
+                    <a href="http://localhost:3000/airbnb/listing?sumID=val"></a>
+                 }
+             </script>
+             <!-- <td> <input type = "button" class = "sumID" id="sumID" name = "sumID" value = "<%= summary._id %>"> <%= summary._id %> </button></td> -->
              <td class = "headt"><%= summary.name %></td>
              <td><%=  summary.bedrooms %> Bedrooms</td>         
              <td class = "sum"><%=  summary.summary %></td>    

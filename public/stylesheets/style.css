@@ -22,11 +22,6 @@ a {
     width: 7%;
 }
 
-/* td {
-  border: 1px solid black;
-  border-collapse: collapse;
-
-} */
 th{
   color:black
 }
@@ -35,8 +30,6 @@ td
 {
   color:#4b1602;
   padding: 15px;
-}
-td{
   border-top:solid 1px black ;
   border-collapse: collapse;
   font-size:17px;
@@ -61,3 +54,4 @@ img{
 {
   font-size : 24px
 }
+/* work, work, work */
